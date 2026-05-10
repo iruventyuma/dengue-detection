@@ -59,16 +59,16 @@ Ratio Features ───► GradientBoostingClassifier ─► Probabilities ─�
 
 ---
 
-## 📁 Project Structure
+## 📸 Screenshots
 
-```
-dengue-detection/
-├── app.py                              # Streamlit web app
-├── final (1).py                        # Model training pipeline
-├── dengue_simple_model.pkl             # Trained ExtraTrees model
-├── Dengue Fever Hematological Dataset.csv  # Dataset
-└── README.md
-```
+### Input Form
+[Input Form](input.jpeg)
+
+### Dengue Positive Result
+[Positive Result](positive.jpeg)
+
+### Dengue Negative Result
+[Negative Result](negative.jpeg)
 
 ---
 
