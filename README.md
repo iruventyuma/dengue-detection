@@ -59,26 +59,6 @@ Ratio Features ───► GradientBoostingClassifier ─► Probabilities ─�
 
 ---
 
-## 🚀 Getting Started
-
-### 1. Clone the repo
-```bash
-git clone https://github.com/iruventyuma/dengue-detection.git
-cd dengue-detection
-```
-
-### 2. Install dependencies
-```bash
-pip install streamlit scikit-learn imbalanced-learn numpy pandas matplotlib joblib shap
-```
-
-### 3. Run the app
-```bash
-streamlit run app.py
-```
-
----
-
 ## 📁 Project Structure
 
 ```
