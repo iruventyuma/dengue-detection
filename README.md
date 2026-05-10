@@ -1,14 +1,16 @@
-🦟 DengueDx — Hematological Dengue Detection System
+# 🦟 DengueDx — Hematological Dengue Detection System
 
 A machine learning web application that predicts dengue fever from **Complete Blood Count (CBC)** test values using a stacked ensemble model. Built with Python, Scikit-learn, and Streamlit.
 
-🩺 Live Demo
+---
+
+## 🩺 Live Demo
 
 > Run locally with `streamlit run app.py`
 
 ---
 
-🧠 Model Architecture
+## 🧠 Model Architecture
 
 This project uses a **dual-path stacked ensemble** approach:
 
@@ -24,7 +26,9 @@ Ratio Features ───► GradientBoostingClassifier ─► Probabilities ─�
 | Path 2 | GradientBoostingClassifier (300 trees) | Engineered ratio features |
 | Meta Learner | MLPClassifier (32→16) | Fuses both probability outputs |
 
-⚗️ Feature Engineering
+---
+
+## ⚗️ Feature Engineering
 
 | Feature | Formula | Clinical Significance |
 |---------|---------|----------------------|
@@ -33,14 +37,18 @@ Ratio Features ───► GradientBoostingClassifier ─► Probabilities ─�
 | RBC_HCT | RBC × HCT | Hemoconcentration (plasma leakage) |
 | MPV_PLT | MPV × Platelets | Platelet dynamics in dengue |
 
-📊 Dataset
+---
+
+## 📊 Dataset
 
 **Dengue Fever Hematological Dataset**
 - Blood count parameters: Platelets, WBC, Neutrophils, Lymphocytes, HCT, RBC, MPV, Haemoglobin, etc.
 - Target: `Result` → Dengue Positive / Negative
 - Class imbalance handled using **SMOTEENN** (SMOTE + Edited Nearest Neighbours)
 
-🖥️ App Features
+---
+
+## 🖥️ App Features
 
 - Medical/clinical UI built with Streamlit
 - Patient info input (name, age, gender, fever duration, sample ID)
@@ -49,8 +57,42 @@ Ratio Features ───► GradientBoostingClassifier ─► Probabilities ─�
 - Probability donut chart + CBC vs Normal bar chart
 - Risk level classification: High / Moderate / Low
 
-⚕️ Disclaimer
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/iruventyuma/dengue-detection.git
+cd dengue-detection
+```
+
+### 2. Install dependencies
+```bash
+pip install streamlit scikit-learn imbalanced-learn numpy pandas matplotlib joblib shap
+```
+
+### 3. Run the app
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📁 Project Structure
+
+```
+dengue-detection/
+├── app.py                              # Streamlit web app
+├── final (1).py                        # Model training pipeline
+├── dengue_simple_model.pkl             # Trained ExtraTrees model
+├── Dengue Fever Hematological Dataset.csv  # Dataset
+└── README.md
+```
+
+---
+
+## ⚕️ Disclaimer
 
 This tool is for **educational and screening purposes only**. It does not replace professional medical diagnosis. All results must be interpreted by a qualified physician. Confirm with NS1 antigen, IgM/IgG serology, and full clinical evaluation.
-
 
